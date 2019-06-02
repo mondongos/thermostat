@@ -5,22 +5,31 @@
     <title>Thermostat</title>
   </head>
   <body>
-    <script type="text/javascript" src="src/thermostat.js">
+    <script type="text/javascript" src="src/thermostat.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-    </script>
     <div class="thermo-gauge">
       <p>This is a gauge</p>
     </div>
 
     <div class="up-down-buttons">
-      <button type="button" name="decrease-temp">Lower Temp</button>
-      <button type="button" name="increase-temp">Increase Temp</button>
+      <button id="decrease-button" type="button" name="decrease-temp">Lower Temp</button>
+      <button id="increase-button" type="button" name="increase-temp">Increase Temp</button>
     </div>
 
     <div class="power-resets">
-      <button type="button" name="power-save">Power Save</button>
-      <button type="button" name="reset">Reset Temp</button>
+      <button id="powersave-button" type="button" name="power-save">Power Save</button>
+      <button id="reset-button" type="button" name="reset">Reset Temp</button>
     </div>
+
+    <script>
+      $(document).ready(function(){
+        $('decrease-button').click(function(){
+          $(this).css('background-color', 'red')
+        });
+
+      });
+    </script>
 
   </body>
 </html>
